@@ -39,7 +39,16 @@
             transition: background-color 0.3s ease;
             font-size: 15px
         }
-        .subparagraph_text{
+
+        .subparagraph_text {
+            color: white
+        }
+
+        .label_spacing {
+            margin-right: 10px;
+            color: white
+        }
+        .validator_text{
             color:white
         }
     </style>
