@@ -68,7 +68,7 @@
                                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home" ImageUrl="~/Images/home.png"></asp:MenuItem>
                                    <asp:MenuItem Text="Afisare Angajati" Value="Afisare Angajati" NavigateUrl="~/Afisare_Angajati.aspx" ImageUrl="~/Images/user.png"></asp:MenuItem>
                                    <asp:MenuItem NavigateUrl="~/Adaugare_Angajati.aspx" Text="Adaugare Angajati" Value="Adaugare Angajati" ImageUrl="~/Images/add_person.png"></asp:MenuItem>
-                                   <asp:MenuItem Text="Actualizare Taxe" Value="Actualizare Taxe" ImageUrl="~/Images/tax.png"></asp:MenuItem>
+                                   <asp:MenuItem Text="Actualizare Taxe" Value="Actualizare Taxe" ImageUrl="~/Images/tax.png" NavigateUrl="~/Actualizare_Taxe.aspx"></asp:MenuItem>
                                </Items>
                            </asp:Menu>
                        </div>
@@ -79,7 +79,7 @@
                     <td>
                         <br />
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                            <div>Continut</div>
+                            <div></div>
                         </asp:ContentPlaceHolder>
 
                     </td>

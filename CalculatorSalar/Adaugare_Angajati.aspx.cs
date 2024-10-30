@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,12 +13,10 @@ public partial class Default3 : System.Web.UI.Page
     SqlConnection cnn = new SqlConnection(Database.string_connect);
     SqlCommand cmd;
     SqlDataReader dr;
-    DataSet ds;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        lblAngajatAdaugat.Visible = false;
-        float impozit, cas, cass;
+        
         try
         {
             cnn.Open();
@@ -36,7 +35,7 @@ public partial class Default3 : System.Web.UI.Page
 
             }
         }
-        catch (Exception ex) { lblErrorMessage.Text = "Nu s-au putut afisa taxele (impozit,CAS,CASS)"; }
+        catch (Exception ex) { lblErrorMessage.Text = "Nu s-au putut afisa taxele (impozit,CAS,CASS)";lblErrorMessage.ForeColor = Color.Red; }
         finally { cnn.Close(); }
     }
 
@@ -48,7 +47,7 @@ public partial class Default3 : System.Web.UI.Page
         try
         {
             cnn.Open();
-            cmd = new SqlCommand("insert into angajati ([NUME],[PRENUME],[FUNCTIE],[SALAR_BAZA],[SPOR],[PREMII_BRUTE],[RETINERI]) values (@nume,@prenume,@functie,@salar_baza,@spor,@premii_brute,@retineri)", cnn);
+            cmd = new SqlCommand("insert into angajati ([NUME],[PRENUME],[FUNCTIE],[SALAR_BAZA],[SPOR],[PREMII_BRUTE],[RETINERI],[TAXA_ID]) values (@nume,@prenume,@functie,@salar_baza,@spor,@premii_brute,@retineri,1)", cnn);
             cmd.Parameters.AddWithValue("@nume",txtNume.Text);
             cmd.Parameters.AddWithValue("@prenume",txtPrenume.Text);
             cmd.Parameters.AddWithValue("@functie",txtFunctie.Text);
@@ -58,6 +57,8 @@ public partial class Default3 : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@retineri",int.Parse(txtRetineri.Text));
             cmd.ExecuteNonQuery();
             lblAngajatAdaugat.Visible = true;
+            lblAngajatAdaugat.Text = "Angajatul " + txtNume.Text + " " + txtPrenume.Text + " a fost adaugat cu succes!";
+            lblAngajatAdaugat.ForeColor = Color.Green;
 
         }
         catch (Exception ex)
