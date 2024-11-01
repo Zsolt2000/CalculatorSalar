@@ -59,7 +59,7 @@
             <table style="width: 100%;">
                 <tr>
                     <td style="text-align: center; background-size: cover; background-color: #182F5D; font-family: Roboto, sans-serif; font-size: 30px; color: white">Calculator Salariu
-                       <div style="margin: 0 auto 0 auto; width: 550px">
+                       <div style="margin: 0 auto 0 auto; width: 750px">
                            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" BorderStyle="Inset" BorderColor="#000080">
                                <LevelMenuItemStyles>
                                    <asp:MenuItemStyle CssClass="menu-item-button" HorizontalPadding="10" />
@@ -69,6 +69,8 @@
                                    <asp:MenuItem Text="Afisare Angajati" Value="Afisare Angajati" NavigateUrl="~/Afisare_Angajati.aspx" ImageUrl="~/Images/user.png"></asp:MenuItem>
                                    <asp:MenuItem NavigateUrl="~/Adaugare_Angajati.aspx" Text="Adaugare Angajati" Value="Adaugare Angajati" ImageUrl="~/Images/add_person.png"></asp:MenuItem>
                                    <asp:MenuItem Text="Actualizare Taxe" Value="Actualizare Taxe" ImageUrl="~/Images/tax.png" NavigateUrl="~/Actualizare_Taxe.aspx"></asp:MenuItem>
+                                   <asp:MenuItem ImageUrl="~/Images/edit.png" NavigateUrl="~/Actualizare_angajati.aspx" Text="Actualizare Angajati" Value="Actualizare Angajati"></asp:MenuItem>
+                                  
                                </Items>
                            </asp:Menu>
                        </div>

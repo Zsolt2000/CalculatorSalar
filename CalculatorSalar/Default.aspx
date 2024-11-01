@@ -16,8 +16,9 @@
             <li><b>Pagina principala:</b><p class="subparagraph_text">Pagina principala contine toate detaliile despre aplicatie</p>
             </li>
             <li><b>Pagina de adaugare angajati:</b><p>In aceasta pagina puteti sa adaugati un angajat nou in baza de date</p></li>
-            <li><b>Pagina de afisare angajati</b><p>In aceasta pagina puteti vizualiza angajatii in baza de date</p></li>
+            <li><b>Pagina de afisare angajati</b><p>In aceasta pagina puteti vizualiza angajatii in baza de date,sa se stearga un angajat si sa se creeze rapoarte</p></li>
             <li><b>Pagina de actualizare taxe</b><p>In aceasta pagina puteti sa actualizati valorile taxelor</p></li>
+            <li><b>Pagina de actualizare angajati</b><p>In aceasta pagina puteti sa actualizati datele despre un angajat</p></li>
         </ul>
     </div>
 

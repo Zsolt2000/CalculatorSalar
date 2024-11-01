@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div style="">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="Black" DataKeyNames="NR_CRT" DataSourceID="SqlDataSource1" ForeColor="Black" HorizontalAlign="Center" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand">
             <Columns>
                 <asp:TemplateField>

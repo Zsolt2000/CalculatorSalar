@@ -53,6 +53,7 @@ public partial class Default2 : System.Web.UI.Page
                 cmd.Parameters.AddWithValue("@cas", float.Parse(txtCASActualizare.Text));
                 cmd.Parameters.AddWithValue("@cass", float.Parse(txtCASSActualizare.Text));
                 cmd.ExecuteNonQuery();
+            lblTaxeActualizate.Text = "Taxele au fost actualizate";
             }
             catch (Exception ex) { lblErrorMessage.Text = "Eroare la actualizare taxelor"; }
             finally { cnn.Close(); }

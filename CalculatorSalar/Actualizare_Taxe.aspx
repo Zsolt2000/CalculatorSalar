@@ -29,7 +29,7 @@
     <br />
     <asp:Button ID="btnActualizareTaxe" runat="server" Text="Actualizare Taxe" OnClick="btnActualizareTaxe_Click" />
     <br />
-    <asp:Label ID="lblErrorMessage" runat="server" ForeColor="Red"></asp:Label>
+    <asp:Label ID="lblErrorMessage" runat="server" ForeColor="Red"></asp:Label><asp:Label ID="lblTaxeActualizate" runat="server" Text="" ForeColor="Green"></asp:Label>
 
 </asp:Content>
 
