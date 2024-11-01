@@ -26,16 +26,24 @@
                 <asp:BoundField DataField="RETINERI" HeaderText="RETINERI" SortExpression="RETINERI" />
                 <asp:BoundField DataField="VIRAT_CARD" HeaderText="VIRAT_CARD" SortExpression="VIRAT_CARD" />
                 <asp:ButtonField ButtonType="Button" Text="Sterge" CommandName="Stergere" />
+                <asp:ButtonField ButtonType="Image" ImageUrl="~/Images/pdf.png" CommandName="Raport" />
             </Columns>
             <FooterStyle BackColor="Black" />
         </asp:GridView>
+        <div style="text-align:center">
+            <br />
+            <asp:Button ID="btnGenerareStatDePlata" runat="server" Text="Generare stat de plata" OnClick="btnGenerareStatDePlata_Click"  />
+        </div>
         <br />
         <br />
         <asp:Label ID="lblCautareAngajat" runat="server" Text="Cautare Angajat: " CssClass="label_spacing"></asp:Label><asp:TextBox ID="txtCautaAngajat" runat="server"></asp:TextBox>
         <asp:Button ID="btnCautaAngajat" runat="server" Text="Cauta" OnClick="btnCautaAngajat_Click" />
+        <br />
+        <br />
+        
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CalculatorSalarConnectionString1 %>" SelectCommand="SELECT [NR_CRT], [NUME], [PRENUME], [FUNCTIE], [SALAR_BAZA], [SPOR], [PREMII_BRUTE], [TOTAL_BRUT], [BRUT_IMPOZABIL], [IMPOZIT], [CAS], [CASS], [RETINERI], [VIRAT_CARD] FROM [Angajati]"></asp:SqlDataSource>
-        <br /><br />
-        <asp:Label ID="lblEroare" runat="server" Text="" ForeColor="Red"></asp:Label>
-    </div>
+
+            <asp:Label ID="lblEroare" runat="server" Text="" ForeColor="Red"></asp:Label>
+        
 </asp:Content>
 
