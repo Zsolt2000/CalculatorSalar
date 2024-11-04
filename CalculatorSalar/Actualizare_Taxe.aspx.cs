@@ -80,7 +80,6 @@ public partial class Default2 : System.Web.UI.Page
         else
         {
             lblErrorMessage.Text = "Eroare la autentificare pentru modificarea taxelor";
-            Response.Redirect("Actualizare_Taxe.aspx");
         }
     }
 }

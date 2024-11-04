@@ -83,7 +83,7 @@ public partial class Default2 : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@premiibrute", Convert.ToInt32(txtPremiiBrute.Text));
             cmd.Parameters.AddWithValue("@retineri", Convert.ToInt32(txtRetineri.Text));
             cmd.ExecuteNonQuery();
-            GridView1.DataBind();
+            
             lblAngajatActualizat.Text = "Angajatul a fost actualizat!";
         }
         catch (Exception ex) { lblError.Text = "Eroare la actualizare taxelor"; }
