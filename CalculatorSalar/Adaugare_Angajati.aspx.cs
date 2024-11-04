@@ -70,4 +70,9 @@ public partial class Default3 : System.Web.UI.Page
             cnn.Close();
         }
     }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Adaugare_Angajati.aspx");  
+    }
 }

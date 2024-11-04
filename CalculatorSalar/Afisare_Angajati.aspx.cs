@@ -245,4 +245,9 @@ public partial class Default2 : System.Web.UI.Page
         Response.End();
     }
 
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Afisare_Angajati.aspx");
+    }
 }

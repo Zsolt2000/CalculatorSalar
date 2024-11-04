@@ -38,6 +38,8 @@
         <asp:Label ID="lblCautareAngajat" runat="server" Text="Cautare Angajat: " CssClass="label_spacing"></asp:Label><asp:TextBox ID="txtCautaAngajat" runat="server"></asp:TextBox>
         <asp:Button ID="btnCautaAngajat" runat="server" Text="Cauta" OnClick="btnCautaAngajat_Click" />
         <br />
+    <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+        <br />
         <br />
         
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CalculatorSalarConnectionString1 %>" SelectCommand="SELECT [NR_CRT], [NUME], [PRENUME], [FUNCTIE], [SALAR_BAZA], [SPOR], [PREMII_BRUTE], [TOTAL_BRUT], [BRUT_IMPOZABIL], [IMPOZIT], [CAS], [CASS], [RETINERI], [VIRAT_CARD] FROM [Angajati]"></asp:SqlDataSource>

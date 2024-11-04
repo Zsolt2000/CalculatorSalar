@@ -31,14 +31,14 @@
     <br />
 
     <asp:Label ID="Label5" runat="server" Text="Spor:" CssClass="label_spacing"></asp:Label>
-    <asp:TextBox ID="txtSpor" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txtSpor" runat="server">0</asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFieldValidatorSpor" runat="server" ErrorMessage="Nu lasati campul gol!" ControlToValidate="txtSpor" CssClass="validator_text"></asp:RequiredFieldValidator>
     <asp:CompareValidator ID="CompareValidatorSpor" runat="server" ErrorMessage="Introduceti doar valori intregi!" ControlToValidate="txtSpor" Operator="DataTypeCheck" Type="Integer" CssClass="validator_text"></asp:CompareValidator>
     <br />
     <br />
 
     <asp:Label ID="Label6" runat="server" Text="Premii Brute:" CssClass="label_spacing"></asp:Label>
-    <asp:TextBox ID="txtPremiiBrute" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txtPremiiBrute" runat="server">0</asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFieldValidatorPremiiBrute" runat="server" ErrorMessage="Nu lasati campul gol!" ControlToValidate="txtPremiiBrute" CssClass="validator_text"></asp:RequiredFieldValidator>
     <asp:CompareValidator ID="CompareValidatorPremiiBrute" runat="server" ErrorMessage="Introduceti doar valori intregi!" ControlToValidate="txtPremiiBrute" Operator="DataTypeCheck" Type="Integer" CssClass="validator_text"></asp:CompareValidator>
     <br />
@@ -60,13 +60,14 @@
     <br />
 
     <asp:Label ID="Label10" runat="server" Text="Retineri:" CssClass="label_spacing"></asp:Label>
-    <asp:TextBox ID="txtRetineri" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txtRetineri" runat="server">0</asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFieldValidatorRetineri" runat="server" ErrorMessage="Nu lasati campul gol!" ControlToValidate="txtRetineri" CssClass="validator_text"></asp:RequiredFieldValidator>
     <asp:CompareValidator ID="CompareValidatorRetineri" runat="server" ErrorMessage="Introduceti doar valori intregi!" ControlToValidate="txtRetineri" Operator="DataTypeCheck" Type="Integer" CssClass="validator_text"></asp:CompareValidator>
     <br />
     <br />
 
     <asp:Button ID="btnAdaugaAngajat" runat="server" Text="Adauga angajat" OnClick="Button1_Click" />
+    <asp:Button ID="btnCancel" runat="server" CausesValidation="False" OnClick="btnCancel_Click" Text="Cancel" />
     <asp:Label ID="lblAngajatAdaugat" runat="server" CssClass="label_spacing"></asp:Label>
     <br />
     <br />

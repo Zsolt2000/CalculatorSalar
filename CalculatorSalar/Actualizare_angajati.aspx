@@ -27,10 +27,9 @@
 
     <asp:Label ID="lblCautaAngajat" runat="server" Text="Cauta angajatul:" CssClass="label_spacing"></asp:Label>
     <asp:TextBox ID="txtCautaAngajat" runat="server"></asp:TextBox>
-    <asp:Button ID="btnCautaAngajat" runat="server" Text="Cauta angajat" OnClick="btnCautaAngajat_Click" />
+    <asp:Button ID="btnCautaAngajat" runat="server" Text="Cauta angajat"  OnClick="btnCautaAngajat_Click" CausesValidation="false"/>
     <br />
     <br />
-
     <asp:Label ID="lblNume" runat="server" Text="Nume: " CssClass="label_spacing"></asp:Label>
     <asp:TextBox ID="txtNume" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFieldValidatorNume" runat="server" ErrorMessage="Nu lasati campul gol!" ControlToValidate="txtNume" CssClass="validator_text"></asp:RequiredFieldValidator>
@@ -76,8 +75,8 @@
 <asp:CompareValidator ID="CompareValidatorRetineri" runat="server" ErrorMessage="Introduceti doar valori intregi!" ControlToValidate="txtRetineri" Operator="DataTypeCheck" Type="Integer" CssClass="validator_text"></asp:CompareValidator>
     <br />
     <br />
-
     <asp:Button ID="btnActualizare" runat="server" Text="Actualizare" OnClick="btnActualizare_Click" />
+    <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" CausesValidation="false"/>
     <br />
     <br />
 

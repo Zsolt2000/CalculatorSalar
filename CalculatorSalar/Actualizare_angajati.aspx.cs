@@ -15,12 +15,12 @@ public partial class Default2 : System.Web.UI.Page
     int nr_crt;
 
     protected void Page_Load(object sender, EventArgs e)
-    {
-
+    {    
     }
 
     protected void btnCautaAngajat_Click(object sender, EventArgs e)
     {
+
         if (txtCautaAngajat.Text == String.Empty)
         {
             GridView1.DataSourceID = "SqlDataSource1";
@@ -48,22 +48,23 @@ public partial class Default2 : System.Web.UI.Page
             catch (Exception ex) { }
             finally { cnn.Close(); }
         }
+
     }
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        if(e.CommandName =="Select")
+        if (e.CommandName == "Select")
         {
-            int rowIndex=Convert.ToInt32(e.CommandArgument);
-            GridViewRow selectedRow= GridView1.Rows[rowIndex];
-            txtNume.Text= selectedRow.Cells[2].Text;
-            txtPrenume.Text= selectedRow.Cells[3].Text;
-            txtFunctie.Text= selectedRow.Cells[4].Text;
-            txtSalarBaza.Text= selectedRow.Cells[5].Text;
-            txtSpor.Text= selectedRow.Cells[6].Text;
-            txtPremiiBrute.Text= selectedRow.Cells[7].Text;
-            txtRetineri.Text= selectedRow.Cells[13].Text;
-            Session["nr_crt"]=Convert.ToInt32(selectedRow.Cells[1].Text);
+            int rowIndex = Convert.ToInt32(e.CommandArgument);
+            GridViewRow selectedRow = GridView1.Rows[rowIndex];
+            txtNume.Text = selectedRow.Cells[2].Text;
+            txtPrenume.Text = selectedRow.Cells[3].Text;
+            txtFunctie.Text = selectedRow.Cells[4].Text;
+            txtSalarBaza.Text = selectedRow.Cells[5].Text;
+            txtSpor.Text = selectedRow.Cells[6].Text;
+            txtPremiiBrute.Text = selectedRow.Cells[7].Text;
+            txtRetineri.Text = selectedRow.Cells[13].Text;
+            Session["nr_crt"] = Convert.ToInt32(selectedRow.Cells[1].Text);
         }
 
     }
@@ -87,5 +88,10 @@ public partial class Default2 : System.Web.UI.Page
         }
         catch (Exception ex) { lblError.Text = "Eroare la actualizare taxelor"; }
         finally { cnn.Close(); }
+    }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Actualizare_angajati.aspx");
     }
 }
