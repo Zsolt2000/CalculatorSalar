@@ -44,20 +44,6 @@ public partial class Default2 : System.Web.UI.Page
     protected void btnActualizareTaxe_Click(object sender, EventArgs e)
     {
         Autentificare.Visible = true;
-        /*
-                 try
-                 {
-                     cnn.Open();
-                     cmd = new SqlCommand("update taxe set impozit=@impozit, cas=@cas,cass=@cass where id=1", cnn);
-                     cmd.Parameters.AddWithValue("@impozit", float.Parse(txtImpozitActualizare.Text));
-                     cmd.Parameters.AddWithValue("@cas", float.Parse(txtCASActualizare.Text));
-                     cmd.Parameters.AddWithValue("@cass", float.Parse(txtCASSActualizare.Text));
-                     cmd.ExecuteNonQuery();
-                 lblTaxeActualizate.Text = "Taxele au fost actualizate";
-                 }
-                 catch (Exception ex) { lblErrorMessage.Text = "Eroare la actualizare taxelor"; }
-                 finally { cnn.Close(); }
-             */
     }
 
     protected void btnAuth_Click(object sender, EventArgs e)
